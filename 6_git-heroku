@@ -2,3 +2,22 @@ Git
     - 'git init' to initialize repo
     - remember to create a .gitignore file to store files you don't want to track, such
     as node_modules
+
+What is a remote?
+    - a remote is a version of your project hosted somewhere else
+
+Deploying to heroku
+    - add ssh keys
+        - heroku keys:add
+    - create heroku project
+        - heroku create <name>
+    - Changes to make
+        - 1. provide instructions to heroku    
+            - we need to tell heroku to run app.js
+            - go to scripts in package.json and modify it
+                - add `"start": "node src/app.js"`
+                - we can also use the script in npm, using npm run start
+        - 2. change the port to listen on to the one provided by heroku
+            - this is provided via an environmental variable process.env.PORT
+        - 3. make the weather request to correct location
+            - modify fetch request url

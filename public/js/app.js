@@ -30,7 +30,7 @@ weatherForm.addEventListener('submit', (e) => {
     const location = searchElement.value;
 
     // pass location into app using fetch
-    fetch(`http://127.0.0.1:3000/weather?address=${encodeURIComponent(location)}`).then((response) => {
+    fetch(`/weather?address=${encodeURIComponent(location)}`).then((response) => {
         response.json().then((data) => {
             if (data.error) {
                 console.log(data.error);

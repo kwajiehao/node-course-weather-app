@@ -10,6 +10,7 @@ const forecast = require('./../../2_weather-app/utils/forecast');
 
 // create web server, then use methods to tell it what to do
 const app = express();
+const port = process.env.PORT || 3000;
 
 
 // define paths
@@ -123,6 +124,6 @@ app.get('*', (req, res) => {
 
 
 // we need to listen on a specific port or IP address
-app.listen(3000, '127.0.0.1', () => {
-	console.log('Server is up on port 3000 of 127.0.0.1')
+app.listen(port, () => {
+	console.log(`Server is up on ${port}`);
 });
