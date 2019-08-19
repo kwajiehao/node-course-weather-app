@@ -2,6 +2,8 @@ Git
     - 'git init' to initialize repo
     - remember to create a .gitignore file to store files you don't want to track, such
     as node_modules
+    - new feature workflow
+        - 
 
 What is a remote?
     - a remote is a version of your project hosted somewhere else
