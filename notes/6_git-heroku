@@ -1,3 +1,6 @@
+NOTE: avoid global modules so that when other people run your code, it can work and not 
+fail because of software issues
+
 Git
     - 'git init' to initialize repo
     - remember to create a .gitignore file to store files you don't want to track, such
