@@ -1,5 +1,5 @@
 // import api key
-const config = require('../config');
+const config = require('./config');
 
 // import requests
 const request = require('request');
