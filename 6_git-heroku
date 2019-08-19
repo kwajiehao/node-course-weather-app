@@ -1,0 +1,4 @@
+Git
+    - 'git init' to initialize repo
+    - remember to create a .gitignore file to store files you don't want to track, such
+    as node_modules
