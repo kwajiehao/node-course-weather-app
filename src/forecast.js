@@ -27,7 +27,7 @@ const darksky = (longitude, latitude, callback) => {
         } else {
             // transmit weather data
             callback(undefined, { 
-                summary: `${body.hourly.summary}.  The temperature is ${body.currently.temperature}, and the chances of rain are ${body.currently.precipProbability}.`,
+                summary: `${body.hourly.summary}.  The temperature is ${body.currently.temperature}, and the chances of rain are ${body.currently.precipProbability}, with the humidity at ${body.currently.humidity * 100}%.`,
                 temperature: body.currently.temperature,
                 rainProbability: body.currently.precipProbability
             });
