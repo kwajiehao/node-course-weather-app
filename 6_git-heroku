@@ -21,3 +21,8 @@ Deploying to heroku
             - this is provided via an environmental variable process.env.PORT
         - 3. make the weather request to correct location
             - modify fetch request url
+    - deploy to heroku 
+        - git remote shows you that remote is created for you on heroku
+        - to deploy, type:
+            - git push heroku master
+            - rebuild and deploy

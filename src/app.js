@@ -3,8 +3,8 @@ const path = require('path');
 const express = require('express');
 const hbs = require('hbs');
 
-const mapbox = require('./../../2_weather-app/utils/geocode');
-const forecast = require('./../../2_weather-app/utils/forecast');
+const mapbox = require('./geocode');
+const forecast = require('./forecast');
 
 
 
