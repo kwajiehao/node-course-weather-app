@@ -41,7 +41,7 @@ app.get('', (req, res) => {
 
 // dictates what the app does on the about page
 app.get('/about', (req, res) => {
-    res.render('About', {
+    res.render('about', {
         title: 'About page',
         name: 'Kwa'
     });
@@ -49,7 +49,7 @@ app.get('/about', (req, res) => {
 
 // dictates what the app does on the help page
 app.get('/help', (req, res) => {
-res.render('Help', {
+res.render('help', {
         title: 'Help page',
         message: 'How can we help you?',
         name: 'Kwa'
