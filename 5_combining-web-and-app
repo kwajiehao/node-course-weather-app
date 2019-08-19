@@ -1,0 +1,21 @@
+Query strings
+    - from the url, we get the query strings
+    - server will parse the query string information and make a request, then return a 
+    result
+    - general structure
+        - ... ?< key >=< value >& ...
+    - get the query string FROM express route handler on REQUEST object
+        - req.query is an object with attributes corresponding to the queries
+        - we need conditional logic to ensure that proper query strings are used
+            - if (!req.query.search) {
+                return res.send({
+                    error: 'You must provide a search term!'
+                });
+            }
+
+Getting data into client side javascript
+    - making a http request: FETCH
+        - fetch is a browser-based api, so we can use it in all browsers
+        - kicks off an async process
+
+Create a form and link it to our backend

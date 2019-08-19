@@ -1,0 +1,15 @@
+Setting up a style sheet
+    - add the following in header to link to a style sheet:
+        - <link rel="stylesheet" href="./css/styles.css">
+    - otherwise, you can add it in <head> directly using <style> </style>
+
+Loading client-side javascript file
+    - use a script tag 
+        - <script src="./js/app.js"></script>
+
+Loading images
+    - use a img tag 
+        - <img src="data/img/macbook-pro-15.jpg" alt="" class="laptop__img">
+
+********** NOTE ********** 
+    - all paths are relative to "public" folder

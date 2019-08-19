@@ -1,0 +1,19 @@
+Template engines
+    - allow you to render dynamic documents
+    - we will use a package called Handlebars
+        - we use hbs, which makes it easy to integrate with express
+    - allows us to re-use header and footer information across pages instead of
+    manually copying and pasting html
+
+Handlebars
+    - just like html, but with a few features to add dynamic elements
+    - to inject data into a hbs file, use double curly braces {{}}
+    - to change the view folder location, use app.set()
+
+Partials with Handlebars    
+    - create a small template as part of a bigger webpage to use across a webpage
+        - headers, footers
+    - to add a partial, use {{>}}
+    - in the partial file itself, you can include {{}} to include properties transmitted
+    from res.render
+        - MAKE SURE THAT ALL THESE PROPERTIES ARE SPECIFIED IN res.render

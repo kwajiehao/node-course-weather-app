@@ -1,0 +1,85 @@
+Web servers
+    - users can interact with your app through a url, instead of command line
+    - servers allow us to serve up all the assets needed for our web app
+        - html to render to screen
+        - css to style app
+        - client-side javascript to set up user interaction
+        - images
+        - json data
+            - allows us to get location from user, convert to forecast, and send back to user
+     - instead of serving up a website, we can also serve up a http json-based API similar to 
+     darksky or mapbox
+
+Express
+    - express makes it easy to create web servers with node
+    - express works through the script in ORDER
+        - when given a url, it will go through the script fom top to bottom
+        - this means if you use the '*' wildcard at the very start, it will just match it
+        right away and none of your pages will display
+
+nodemon
+    - by default, only restarts server when js files change
+    - we can customize this to include other file types
+        - nodemon <file> -e js,hbs
+
+******************** APP ********************
+
+app.get(<route>, <callback>)
+    - configures what the server should do if someone tries to access certain url
+        - use this if you're not using app.use
+    - route: partial url
+    - callback: what to do when you go to this website. Takes two arguments: request and response
+        - (req, res) => { 
+            
+            // req contains incoming request to web server
+            // res contains bunch of methods that allow us to customize what to send back to 
+                requester
+
+        }
+    - use for 404 pages as well ('*' wildcard)
+        - examples:
+            - '*'
+            - '/help/*'
+
+app.listen()
+    - this starts up the server
+
+app.use( <directory> )
+    - chooses which part of the web server is exposed 
+
+app.set( <key - setting name> , <value> )
+    - allows you to set a given express setting
+
+******************** Others ********************
+
+res.send()
+    - sends stuff back to person who requested
+    - can only send ONCE
+    - can send back:
+        - text
+            - 'Hello Express'
+        - html
+            - '<h1>Hello Express</h1>'
+        - json (object) or array
+            - {
+                age: 28,
+                name: 'Kwa'
+            }   
+            - automatically stringified for us
+
+res.render()
+    - render a hbs view
+        - res.render( <file name> , <object for view to access> )
+
+index.html 
+    - automatically served up by Express
+
+html files in "Public"
+    - no need to use app.get()
+    - just go directly to the URL and it'll be there since they are static pages
+
+__dirname, __filename
+    - variable which contains current address of file, name of file being run
+    - use node's built-in function, path, to manipulate paths
+        - path.join(__dirname, '../public/')
+

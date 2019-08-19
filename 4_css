@@ -1,0 +1,33 @@
+shorthands
+    - for <div class="main-content"> you can type div.main-content
+
+body
+    - 'color' on body sets the color of all the elements on the webpage
+        - all the text on the page unless already specified
+        - elements like anchor tags which have their own prespecified css remain 
+        unaffected
+        - can be text or a # number
+    - font-family
+        - font such as arial
+    - max-width
+    - 2 ways to space things
+        - margin 
+            - 0 auto;
+                - no margin on top or bottom
+                - auto adjust for left and right
+            - everything OUTSIDE highlighted area
+        - padding
+            - 0 16px;
+                - no padding above or below
+                - 16px between body content and side of browser window
+            - everything inside highlighted area
+
+setting a sticky footer - flexbox
+    - wrap all contents except footer in div element
+    - then, use flexbox to let this div take up all the available space
+    - css   
+        - display: flex;
+        - flex-direction: column;
+        - min-height = 100vh; (100% of the viewport height)
+        - then on the directed class, use flex-grow: 1;
+        
