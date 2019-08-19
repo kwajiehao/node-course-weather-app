@@ -1,5 +1,7 @@
 NOTE: avoid global modules so that when other people run your code, it can work and not 
 fail because of software issues
+    - installing as a devDependency: --save-dev
+    - devDependencies are dependencies you only need for development, not for running the app
 
 Git
     - 'git init' to initialize repo
